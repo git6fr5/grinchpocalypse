@@ -6,8 +6,8 @@ function initialize() {
 	debug = false;
 	
 	// movement
-	max_speed = 32;
-	acceleration = 16;
+	max_speed = 20;
+	acceleration = 5;
 	resistance = 0.975;
 	
 	// knockback
@@ -45,9 +45,12 @@ function initialize() {
 
 }
 
-function get_target() {
+function get_target(dt = 0) {
 	
-	if (is_fighting_for_present) { return; }
+	if (is_fighting_for_present || is_knockbacked || is_getting_up) { 
+		path_end();
+		return; 
+	}
 	
 	target_x = random_range(0, room_width);
 	target_y = random_range(0, room_height);
@@ -96,6 +99,22 @@ function get_target() {
 	}
 	
 	target_y += 6;
+	
+	if (has_present) {			
+		var center_x = room_width / 2;
+		var center_y = room_height / 2;
+		
+		target_x = x + 100 * (x - center_x);
+		target_y = y + 100 * (y - center_y);
+	
+	}
+	
+	var slow_factor = has_present ? present_slow : 1;
+	
+	var path = path_add();
+	var _speed = slow_factor * max_speed * dt;
+	mp_potential_path(path, target_x, target_y, 8, 2, false);
+	path_start(path, _speed, path_action_continue, true);
 	
 }
 
