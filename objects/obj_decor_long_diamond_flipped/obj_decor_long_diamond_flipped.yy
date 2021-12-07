@@ -1,9 +1,9 @@
 {
   "spriteId": {
-    "name": "spr_decor_big_diamond",
-    "path": "sprites/spr_decor_big_diamond/spr_decor_big_diamond.yy",
+    "name": "spr_long_diamond_flipped",
+    "path": "sprites/spr_long_diamond_flipped/spr_long_diamond_flipped.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_decor",
+  "name": "obj_decor_long_diamond_flipped",
   "tags": [],
   "resourceType": "GMObject",
 }
