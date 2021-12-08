@@ -127,7 +127,7 @@ function movement(dt) {
 		hspeed = knockback_hspeed;
 		vspeed = knockback_vspeed;
 		
-		move_bounce_solid(true);
+		// move_bounce_solid(true);
 	
 	}
 	else if (is_getting_up) {
@@ -138,7 +138,7 @@ function movement(dt) {
 		vspeed = 0;
 		hspeed = 0;
 	}
-	else if (is_fighting_for_present) {
+	else {
 		
 		hspeed += sign(target_x - x) * acceleration * dt
 		vspeed += sign(target_y - y) * acceleration * dt
@@ -153,8 +153,8 @@ function movement(dt) {
 		
 	}
 	
-	var slow_factor = has_present ? present_slow : 1;
-	path_speed = slow_factor * max_speed * dt;
+	// var slow_factor = has_present ? present_slow : 1;
+	// path_speed = slow_factor * max_speed * dt;
 	
 	// depth 
 	depth = -y;

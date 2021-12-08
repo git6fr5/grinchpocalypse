@@ -2,7 +2,7 @@
 // ----------------- //
 function fire(dt) {
 
-	if (mouse_check_button(mb_left) && fire_ticks == 0 && ammo > 0) {
+	if (mouse_check_button(button) && fire_ticks == 0 && ammo > 0) {
 	
 		instance_create_depth(x + muzzle_offset_x, y + muzzle_offset_x, -y, bullet);
 		ammo -= 1;
@@ -50,7 +50,7 @@ function attach() {
 	
 	muzzle_offset_x = 0; // muzzle_length * dir_x / norm;
 	muzzle_offset_y = 0; // muzzle_length * dir_y / norm;
-	
+
 }
 
 

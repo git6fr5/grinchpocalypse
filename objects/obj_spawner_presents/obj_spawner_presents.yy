@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_spawner_present",
-    "path": "sprites/spr_spawner_present/spr_spawner_present.yy",
+    "name": "spr_present",
+    "path": "sprites/spr_present/spr_present.yy",
   },
   "solid": false,
   "visible": false,

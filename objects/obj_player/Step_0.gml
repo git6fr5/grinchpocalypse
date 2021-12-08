@@ -73,35 +73,53 @@ function pick_up_present() {
 	
 }
 
-function switch_weapon() {
+function switch_weapon(dt) {
 	
 	if (has_present) {
+		if (loot_weapon != noone) {
+			loot_weapon.is_active = false;
+		}
 		primary_weapon.is_active = false;
 	}
 	else {
-		primary_weapon.is_active = true;
+		if (loot_weapon != noone) {
+			loot_weapon.is_active = true;
+			primary_weapon.is_active = false;
+		}
+		else {
+			primary_weapon.is_active = true;
+		}
+	}
+	
+	if (loot_weapon != noone) {
+		loot_ticks += dt
+		if (loot_ticks > loot_duration) {
+			instance_destroy(loot_weapon);
+			loot_weapon = noone;
+			loot_ticks = 0;
+		}
+		return;
 	}
 	
 	var new_weapon = noone;
-	if (keyboard_check_pressed(ord("1"))) {
+	if (mouse_check_button_pressed(mb_left)) {
 		new_weapon = obj_gun_snowpistol;
 	}
-	else if (keyboard_check_pressed(ord("2"))) {
+	else if (mouse_check_button_pressed(mb_right)) {
 		new_weapon = obj_gun_ornament;
 	}
-	else if (keyboard_check_pressed(ord("3"))) {
-		new_weapon = obj_gun_snowman;
-	}	
 	
 	if (new_weapon != noone) {
 		primary_weapon.is_active = false;
 		if (instance_exists(new_weapon) && new_weapon.object_index == new_weapon) {
 			primary_weapon = new_weapon;
 			primary_weapon.is_active = true;
+			primary_weapon.x = x; primary_weapon.y = y;
 		}
 		else {
 			primary_weapon = instance_create_depth(x, y, -y, new_weapon);
 			primary_weapon.is_active = true;
+			primary_weapon.x = x; primary_weapon.y = y;
 		}
 		
 		if (has_present) {
@@ -116,7 +134,7 @@ function main() {
 	var dt = delta_time / 1000000;
 	movement(dt);
 	check_present();
-	switch_weapon();
+	switch_weapon(dt);
 	// move_bounce_solid(false);
 	
 }

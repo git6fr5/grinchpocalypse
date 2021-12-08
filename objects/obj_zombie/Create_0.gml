@@ -105,6 +105,8 @@ function get_target(dt = 0) {
 	if (instance_exists(obj_zombie)) {
 		for (i = 0; i < instance_number(obj_zombie); i += 1) {
 			var zombie = instance_find(obj_zombie, i);
+			
+			// move towards zombies with presents
 			if (zombie.has_present && distance_to_point(zombie.x, zombie.y) < distance) {
 				side = sign(x - zombie.x);
 				target_x = zombie.x + x_offset * side;;
@@ -114,10 +116,21 @@ function get_target(dt = 0) {
 				target_person = noone;
 				target_present = noone;
 				target_zombie = zombie;
-
 			}
 		}
+		
+		//var closest_zomb = instance_nearest(x, y, obj_zombie);
+		//if (!closest_zomb.has_present && distance_to_point(closest_zomb.x, closest_zomb.y) < 50) {
+		//	target_x = zombie.x + sign(x - zombie.x) * 50;
+		//	target_y = zombie.y + sign(y - zombie.y) * 50;
+			
+		//	target_person = noone;
+		//	target_present = noone;
+		//	target_zombie = noone;
+		//}
+		
 	}
+	
 	
 	target_y += 8;
 	
@@ -130,12 +143,12 @@ function get_target(dt = 0) {
 	
 	}
 	
-	var slow_factor = has_present ? present_slow : 1;
+	//var slow_factor = has_present ? present_slow : 1;
 	
-	var _speed = slow_factor * max_speed * dt;
-	path_end();
-	mp_potential_path(path, target_x, target_y, path_precision, path_depth, false);
-	path_start(path, _speed, path_action_stop, false);
+	//var _speed = slow_factor * max_speed * dt;
+	//path_end();
+	//mp_potential_path(path, target_x, target_y, path_precision, path_depth, false);
+	//path_start(path, _speed, path_action_stop, false);
 	
 }
 

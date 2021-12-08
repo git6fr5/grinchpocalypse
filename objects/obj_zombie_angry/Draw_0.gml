@@ -43,7 +43,7 @@ function get_direction() {
 		offset = 0;
 	}
 	if (sprite_index == spr_grinch_angry_steal) {
-		image_xscale = side;
+		image_xscale = -side;
 		offset = 0;
 	}
 	
@@ -57,7 +57,7 @@ function get_direction() {
 		else if (is_stealing) {
 			// wtf
 			is_stealing = false
-			instance_create_depth(target_x + side * x_offset, target_y, -target_y, obj_zombie);
+			instance_create_depth(x - side * x_offset, y, -y, obj_zombie);
 			instance_create_depth(x, y, -y, obj_zombie);
 			instance_destroy();
 		}

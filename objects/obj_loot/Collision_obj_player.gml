@@ -5,7 +5,7 @@ function activate() {
 	if (is_weapon) {
 		obj_player.loot_weapon = loot;
 	}
-	
+	instance_destroy();
 }
 
 activate();

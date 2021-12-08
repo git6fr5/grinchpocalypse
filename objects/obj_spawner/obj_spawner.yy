@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_spawner",
-    "path": "sprites/spr_spawner/spr_spawner.yy",
+    "name": "spr_grinch",
+    "path": "sprites/spr_grinch/spr_grinch.yy",
   },
   "solid": false,
   "visible": false,

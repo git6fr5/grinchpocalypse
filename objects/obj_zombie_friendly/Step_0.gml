@@ -1,0 +1,31 @@
+
+function fire() {
+	show_debug_message("firing");
+	if (instance_exists(obj_zombie)) {
+		var zomb = instance_nearest(x, y, obj_zombie);
+		
+		var diff_x = zomb.x - x;
+		var diff_y = zomb.y - y;
+		
+		var sqr_dist = diff_x * diff_x + diff_y * diff_y;
+		if (sqr_dist < radius * radius) {	
+			var new_bullet = instance_create_depth(x, y, -y, obj_bullet);
+			new_bullet.fire_direction_x = zomb.x - x;
+			new_bullet.fire_direction_y = zomb.y - y;
+			new_bullet.player_fired = false;
+		}
+	}
+}
+
+function main() {
+	
+	var dt = delta_time / 1000000;
+	fire_ticks += dt;
+	if (fire_ticks > fire_interval) {
+		fire();
+		fire_ticks = 0;
+	}
+	
+}
+
+main();

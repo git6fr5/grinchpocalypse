@@ -14,8 +14,8 @@
   "soundFile": "sfx_grinch_scream.mp3",
   "duration": 4.466939,
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfx_grinch_scream",

@@ -28,6 +28,8 @@ function initialize() {
 	max_ammo = infinity;
 	ammo = max_ammo;
 	
+	button = mb_left;
+	
 	if (debug) {
 		show_debug_message("Initialized a gun");
 	}

@@ -19,6 +19,11 @@ function initialize() {
 	init_ticks = 0.075;
 	init = false;
 	virtual_initialized = false;
+	
+	player_fired = true;
+	fire_direction_x = 0;
+	fire_direction_y = 0;
+	
 }
 
 // ----------------- //

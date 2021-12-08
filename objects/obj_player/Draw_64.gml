@@ -18,7 +18,7 @@ draw_text_transformed( 400, 0, score_text, 1.5, 1.5, 0);
 
 var scale = display_get_gui_height() / room_height;
 
-show_debug_message(display_get_gui_height());
+// show_debug_message(display_get_gui_height());
 
 // -------------------------------------------------------- //
 var present_offset_x = 2 * scale;
@@ -77,8 +77,8 @@ candygun_pos_x += 31 * scale;
 candygun_pos_y += 11 * scale;
 
 var ammo_percent = 1;
-if (primary_weapon.ammo != infinity) {
-	ammo_percent = primary_weapon.ammo / primary_weapon.max_ammo;
+if (instance_exists(obj_gun_ornament)) {
+	ammo_percent = obj_gun_ornament.ammo / obj_gun_ornament.max_ammo;
 }
 var ammo_width = sprite_get_width(spr_ui_candygun_ammo) * ammo_percent;
 var ammo_height = sprite_get_height(spr_ui_candygun_ammo);

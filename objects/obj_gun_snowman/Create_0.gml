@@ -25,8 +25,10 @@ function initialize() {
 	muzzle_offset_y = 0;
 	
 	// ammo
-	max_ammo = 100;
+	max_ammo = infinity;
 	ammo = max_ammo;
+	
+	button = mb_left;
 	
 	if (debug) {
 		show_debug_message("Initialized a gun");

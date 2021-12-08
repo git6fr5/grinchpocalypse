@@ -11,6 +11,9 @@ function initialize() {
 	num_loots_dropped = 0;
 	presents_per_loot = 2;
 	
+	alpha = 1;
+	is_colliding_with_player = false;
+	
 }
 
 // ----------------- //

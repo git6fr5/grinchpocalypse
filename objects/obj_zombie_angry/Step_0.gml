@@ -28,19 +28,19 @@ function movement(dt) {
 		vspeed = 0;
 	}
 	else {
-		//hspeed += sign(target_x - x) * acceleration * dt
-		//vspeed += sign(target_y - y) * acceleration * dt
+		hspeed += sign(target_x - x) * acceleration * dt
+		vspeed += sign(target_y - y) * acceleration * dt
 	
-		//// resistance
-		//vspeed *= resistance;
-		//hspeed *= resistance;
+		// resistance
+		vspeed *= resistance;
+		hspeed *= resistance;
 		
-		//// max speed
-		//speed = clamp(speed, -max_speed * dt, max_speed * dt);
+		// max speed
+		speed = clamp(speed, -max_speed * dt, max_speed * dt);
 	
-		//if (debug) {
-		//	show_debug_message("Speed: " + string(speed / dt));
-		//}
+		if (debug) {
+			show_debug_message("Speed: " + string(speed / dt));
+		}
 	}
 	
 	if (x == clamp(x, target_x - 1, target_x + 1) && y == clamp(y, target_y - 1, target_y + 1)) {

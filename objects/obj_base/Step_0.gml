@@ -23,7 +23,7 @@ function check_for_presents() {
 		var y_offset = random_range(50, 100);
 	
 		instance_create_depth(x + x_offset, y + y_offset, -(y + y_offset), obj_loot);
-			num_loots_dropped += 1;
+		num_loots_dropped += 1;
 	}
 
 }

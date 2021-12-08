@@ -43,21 +43,21 @@ function get_target(dt = 0) {
 	target_y = random_range(0, room_height);
 	
 	if (is_stealing || just_spawned) { 
-		path_end();
+		// path_end();
 		return; 
 	}
 	
 	if (instance_exists(obj_zombie_friendly)) {
 		target_friendly_zombie = instance_nearest(x, y, obj_zombie_friendly);
 		side = sign(x - target_friendly_zombie.x);
-		target_x = target_friendly_zombie.x - x_offset * side;
+		target_x = target_friendly_zombie.x + x_offset * side;
 		target_y = target_friendly_zombie.y;
 	}
 	
-	var _speed = max_speed * dt;
-	path_end();
-	mp_potential_path(path, target_x, target_y, path_precision, path_depth, false);
-	path_start(path, _speed, path_action_stop, false);
+	//var _speed = max_speed * dt;
+	//path_end();
+	//mp_potential_path(path, target_x, target_y, path_precision, path_depth, false);
+	//path_start(path, _speed, path_action_stop, false);
 }
 
 // ----------------- //
