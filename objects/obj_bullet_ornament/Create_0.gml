@@ -15,6 +15,9 @@ function initialize() {
 	
 	impact_sound = sfx_snowball_hit;
 
+	life_ticks = 0;
+	init_ticks = 0.075;
+	init = false;
 	virtual_initialized = false;
 }
 

@@ -11,7 +11,8 @@ function initialize() {
 	resistance = 0.75;
 	
 	// stats
-	hp = 3;
+	max_hp = 3;
+	hp = max_hp;
 	
 	// weapons
 	primary_weapon = instance_create_depth(x, y, -y, obj_gun_snowpistol);
