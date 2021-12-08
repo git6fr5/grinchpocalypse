@@ -13,6 +13,8 @@ function initialize() {
 	damage = 1;
 	knockback_speed = bullet_speed * 0.5;
 	
+	impact_sound = sfx_snowball_hit;
+
 	virtual_initialized = false;
 }
 

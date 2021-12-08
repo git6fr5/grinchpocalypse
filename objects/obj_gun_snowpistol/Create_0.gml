@@ -14,8 +14,10 @@ function initialize() {
 	// firing
 	// fire_amount = 3;
 	bullet = obj_bullet;
-	fire_rate = 0.35;
+	fire_rate = 0.7;
 	fire_ticks = 0;
+	
+	fire_sound = sfx_slingshot;
 	
 	// muzzle
 	muzzle_length = 0;

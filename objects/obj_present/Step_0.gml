@@ -8,8 +8,11 @@ function movement(dt) {
 			knockback_ticks = 0;
 			is_knockbacked = false;
 		}
-		vspeed *= 0.75;
-		hspeed *= 0.75;
+		knockback_vspeed *= 0.75;
+		knockback_hspeed *= 0.75;
+		
+		vspeed = knockback_vspeed;
+		hspeed = knockback_hspeed;
 	}
 	else {
 		hspeed = 0;
@@ -59,9 +62,30 @@ function check_for_base() {
 	
 }
 
+function virtual_init() {
+	if (is_dropped) {
+		x = origin_x;
+		y = origin_y;
+		is_falling = false;
+		is_dropped = false;
+	}
+	else {
+		if (x < room_width / 2) {
+			audio_play_sound(sfx_bells_left, 1, false);
+		}
+		else {
+			audio_play_sound(sfx_bells_right, 1, false);
+		}
+	}
+	b_virtual_init = false;
+}
+
 // ----------------- //
 function main() {
 	var dt = delta_time / 1000000;
+	if (b_virtual_init) {
+		virtual_init();
+	}
 	if (is_falling) {
 		is_targetable = false;
 		fall(dt);

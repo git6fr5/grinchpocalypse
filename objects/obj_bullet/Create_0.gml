@@ -11,8 +11,13 @@ function initialize() {
 	
 	// bullet_kickback = 5; // get this from the gun.
 	damage = -1;
-	knockback_speed = bullet_speed * 3;
+	knockback_speed = 256;
 	
+	impact_sound = sfx_snowball_hit;
+	
+	life_ticks = 0;
+	init_ticks = 0.075;
+	init = false;
 	virtual_initialized = false;
 }
 

@@ -53,20 +53,24 @@ function check_present() {
 
 function drop_present() {
 	// drop present
-	instance_create_depth(x, y + 10, -(y+10), obj_present);
+	var present = instance_create_depth(x, y + 10, -(y+10), obj_present);
+	present.is_dropped = true;
 	has_present = false;
+	return present;
 }
 
 function pick_up_present() {
-	var present = instance_nearest(x, y, obj_present);
-	var diff_x = present.x - x;
-	var diff_y = present.y - y;
-	var dist = diff_x * diff_x + diff_y * diff_y;
-	if (dist < present_pickup_distance * present_pickup_distance) {
-		// pick up the present
-		instance_destroy(present);
-		has_present = true;
+	
+	if (instance_exists(obj_present)) {
+		for (i = 0; i < instance_number(obj_present); i += 1) {
+			var present = instance_find(obj_present, i);
+			if (present.is_targetable && distance_to_point(present.x, present.y) < present_pickup_distance) {
+				instance_destroy(present);
+				has_present = true;
+			}
+		}
 	}
+	
 }
 
 function switch_weapon() {
@@ -113,6 +117,7 @@ function main() {
 	movement(dt);
 	check_present();
 	switch_weapon();
+	// move_bounce_solid(false);
 	
 }
 

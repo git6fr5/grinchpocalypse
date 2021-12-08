@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_long_diamond_flipped",
-    "path": "sprites/spr_long_diamond_flipped/spr_long_diamond_flipped.yy",
+    "name": "spr_decor_long_diamond_flipped",
+    "path": "sprites/spr_decor_long_diamond_flipped/spr_decor_long_diamond_flipped.yy",
   },
   "solid": false,
   "visible": true,

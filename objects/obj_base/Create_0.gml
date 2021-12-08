@@ -8,6 +8,9 @@ function initialize() {
 	level = 0;
 	presents_per_level = 1;
 	
+	num_loots_dropped = 0;
+	presents_per_loot = 2;
+	
 }
 
 // ----------------- //

@@ -12,7 +12,7 @@ function knock_present() {
 
 //---------------------//
 function main(){
-	knock_present();
+	// knock_present();
 }
 
 main();

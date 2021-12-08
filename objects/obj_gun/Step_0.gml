@@ -12,6 +12,8 @@ function fire(dt) {
 		if (debug) {
 			show_debug_message("Fired a bullet from this gun!");
 		}
+		
+		audio_play_sound(fire_sound, 1, false);
 	}
 	
 }

@@ -6,12 +6,12 @@ function initialize() {
 	debug = false;
 	
 	// stats
-	min_spawn_radius = max(room_width, room_height);
+	min_spawn_radius = 4 //max(room_width, room_height);
 	max_spawn_radius = min_spawn_radius + 100;
-	spawn_interval = 1;
+	spawn_interval = 12;
 	spawn_ticks = 0;
 	spawn_object = obj_zombie;
-	max_spawn_objects = 2;
+	max_spawn_objects = 7;
 	num_spawn_objects = 0;
 	spawn_objects = [];
 	

@@ -5,6 +5,12 @@ function initialize() {
 	// debug
 	debug = false;
 	
+	// pathing
+	path = path_add();
+	// mp_potential_settings(5, 90, 10, false)
+	path_precision = 4;
+	path_depth = 1;
+	
 	// movement
 	max_speed = 20;
 	acceleration = 5;
@@ -15,6 +21,8 @@ function initialize() {
 	knockback_ticks = 0;
 	knockback_duration = 0.35;
 	knockback_resistance = 0.85;
+	knockback_vspeed = 0;
+	knockback_hspeed = 0;
 	
 	// getting up
 	is_getting_up = false;
@@ -37,11 +45,17 @@ function initialize() {
 	// stats
 	anger = 0;
 	friendly_threshold = -5;
-	angry_threshold = 5;
+	angry_threshold = 1;
 	present_slow = 0.5;
 	
 	// sprites
 	cycle_length = 4;
+	
+	// 
+	is_laughing = false;
+	laughing_ticks = 0;
+	laugh_interval = 1;
+	laughs = [sfx_grinch_happy_1, sfx_grinch_happy_2, sfx_grinch_happy_3, sfx_grinch_happy_4, sfx_grinch_happy_5, sfx_grinch_happy_6]
 
 }
 
@@ -54,31 +68,12 @@ function get_target(dt = 0) {
 	
 	target_x = random_range(0, room_width);
 	target_y = random_range(0, room_height);
+	
 	target_zombie = noone;
 	target_present = noone;
+	target_person = noone;
 	
 	var distance = infinity;
-	
-	if (instance_exists(obj_present)) {
-		var present = instance_nearest(x, y, obj_present);
-		
-		if (present.is_targetable) {
-			target_x = present.x;
-			target_y = present.y;
-			distance = 	distance_to_point(present.x, present.y);
-		}
-		else {
-			for (i = 0; i < instance_number(obj_present); i += 1) {
-				present = instance_find(obj_present, i);
-				if (present.is_targetable && distance_to_point(present.x, present.y) < distance) {
-					target_x = present.x;
-					target_y = present.y;
-					distance = distance_to_point(present.x, present.y);
-				}
-			}
-		}
-		target_present = present;
-	}
 	
 	if (distance_to_point(obj_player.x, obj_player.y) < distance) {
 		if (obj_player.has_present) {
@@ -86,19 +81,45 @@ function get_target(dt = 0) {
 			target_y = obj_player.y;
 			distance = distance_to_point(obj_player.x, obj_player.y);
 		}
+		
+		target_person = obj_player;
 	}
 	
-	for (i = 0; i < instance_number(obj_zombie); i += 1) {
-		var zombie = instance_find(obj_zombie, i);
-		if (zombie.has_present && distance_to_point(zombie.x, zombie.y) < distance) {
-			target_x = zombie.x - x_offset * side;;
-			target_y = zombie.y;
-			target_zombie = zombie;
-			distance = distance_to_point(zombie.x, zombie.y);
+	if (instance_exists(obj_present)) {
+		for (i = 0; i < instance_number(obj_present); i += 1) {
+			present = instance_find(obj_present, i);
+			if (present.is_targetable && distance_to_point(present.x, present.y) < distance) {
+
+				target_x = present.x;
+				target_y = present.y;
+				
+				distance = distance_to_point(present.x, present.y);
+				target_person = noone;
+				target_present = present;
+				
+			}
+		}
+		
+	}
+	
+	if (instance_exists(obj_zombie)) {
+		for (i = 0; i < instance_number(obj_zombie); i += 1) {
+			var zombie = instance_find(obj_zombie, i);
+			if (zombie.has_present && distance_to_point(zombie.x, zombie.y) < distance) {
+				side = sign(x - zombie.x);
+				target_x = zombie.x + x_offset * side;;
+				target_y = zombie.y;
+				
+				distance = distance_to_point(zombie.x, zombie.y);
+				target_person = noone;
+				target_present = noone;
+				target_zombie = zombie;
+
+			}
 		}
 	}
 	
-	target_y += 6;
+	target_y += 8;
 	
 	if (has_present) {			
 		var center_x = room_width / 2;
@@ -111,10 +132,10 @@ function get_target(dt = 0) {
 	
 	var slow_factor = has_present ? present_slow : 1;
 	
-	var path = path_add();
 	var _speed = slow_factor * max_speed * dt;
-	mp_potential_path(path, target_x, target_y, 8, 2, false);
-	path_start(path, _speed, path_action_continue, true);
+	path_end();
+	mp_potential_path(path, target_x, target_y, path_precision, path_depth, false);
+	path_start(path, _speed, path_action_stop, false);
 	
 }
 

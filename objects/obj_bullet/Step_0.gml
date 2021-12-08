@@ -20,3 +20,12 @@ if (!virtual_initialized) {
 	set_direction(); // this should be muzzle pos
 	virtual_initialized = true;
 }
+
+if (init == false) {
+	var dt = delta_time / 1000000;
+	life_ticks += dt;
+
+	if (life_ticks >= init_ticks) {
+		init = true;
+	}
+}

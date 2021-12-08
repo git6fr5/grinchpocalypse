@@ -5,13 +5,14 @@ function grab_present() {
 		has_present = true;
 		grabbing_present = true;
 		image_index = 0;
+		other.is_targetable = false;
 		instance_destroy(other);
 	}
 }
 
 //---------------------//
 function main(){
-	grab_present();
+	// grab_present();
 }
 
 main();

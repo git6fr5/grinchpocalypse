@@ -5,12 +5,12 @@ function initialize() {
 	debug = false;
 	
 	// stats
-	min_spawn_radius = 32;
-	max_spawn_radius = 64;
-	spawn_interval = 3;
+	min_spawn_radius = 80;
+	max_spawn_radius = 150;
+	spawn_interval = 18;
 	spawn_ticks = 0;
 	spawn_object = obj_present;
-	max_spawn_objects = 1;
+	max_spawn_objects = 5;
 	num_spawn_objects = 0;
 	spawn_objects = [];
 	

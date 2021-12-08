@@ -17,6 +17,8 @@ function initialize() {
 	fire_rate = 0.5;
 	fire_ticks = 0;
 	
+	fire_sound = sfx_slingshot;
+	
 	// muzzle
 	muzzle_length = 0;
 	muzzle_offset_x = 0;
