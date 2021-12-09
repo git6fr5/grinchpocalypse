@@ -6,10 +6,13 @@ function initialize() {
 	debug = false;
 	
 	// pathing
+	// mp_potential_settings(45, 5, 100, true);
 	path = path_add();
 	// mp_potential_settings(5, 90, 10, false)
 	path_precision = 4;
-	path_depth = 1;
+	path_depth = 4;
+	origin_x = x;
+	origin_y = y;
 	
 	// movement
 	max_speed = 20;
@@ -117,6 +120,19 @@ function get_target(dt = 0) {
 				target_present = noone;
 				target_zombie = zombie;
 			}
+			
+			else if (!zombie.has_present && zombie != self && distance > 15) {
+				if (distance_to_point(zombie.x, zombie.y) > 5 && distance_to_point(zombie.x, zombie.y) < 15) {
+					
+					target_x = x + 15 * sign(x - zombie.x);
+					target_y = y + 15 * sign(y - zombie.y);
+					
+					distance = distance_to_point(zombie.x, zombie.y);
+					target_person = noone;
+					target_present = noone;
+					target_zombie = zombie;
+				}
+			}
 		}
 		
 		//var closest_zomb = instance_nearest(x, y, obj_zombie);
@@ -138,8 +154,11 @@ function get_target(dt = 0) {
 		var center_x = room_width / 2;
 		var center_y = room_height / 2;
 		
-		target_x = x + 100 * (x - center_x);
-		target_y = y + 100 * (y - center_y);
+		//target_x = x + 100 * (x - center_x);
+		//target_y = y + 100 * (y - center_y);
+		
+		target_x = origin_x;
+		target_y = origin_y;
 	
 	}
 	

@@ -17,7 +17,7 @@ function initialize() {
 	fire_rate = 0.1;
 	fire_ticks = 0;
 	
-	fire_sound = sfx_slingshot;
+	fire_sound = sfx_gun_snowman;
 	
 	// muzzle
 	muzzle_length = 10;

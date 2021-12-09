@@ -67,6 +67,7 @@ function pick_up_present() {
 			if (present.is_targetable && distance_to_point(present.x, present.y) < present_pickup_distance) {
 				instance_destroy(present);
 				has_present = true;
+				return;
 			}
 		}
 	}

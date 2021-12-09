@@ -3,7 +3,7 @@
     "name": "spr_decor_small_diamond",
     "path": "sprites/spr_decor_small_diamond/spr_decor_small_diamond.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,

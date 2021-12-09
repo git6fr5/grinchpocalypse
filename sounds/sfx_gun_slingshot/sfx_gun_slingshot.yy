@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_slingshot.mp3",
+  "soundFile": "sfx_gun_slingshot.mp3",
   "duration": 0.470204,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_slingshot",
+  "name": "sfx_gun_slingshot",
   "tags": [],
   "resourceType": "GMSound",
 }

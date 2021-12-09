@@ -127,7 +127,7 @@ function movement(dt) {
 		hspeed = knockback_hspeed;
 		vspeed = knockback_vspeed;
 		
-		// move_bounce_solid(true);
+		move_bounce_solid(true);
 	
 	}
 	else if (is_getting_up) {
@@ -138,19 +138,12 @@ function movement(dt) {
 		vspeed = 0;
 		hspeed = 0;
 	}
+	else if (is_fighting_for_present) {
+		__acceleration(dt)
+	}
 	else {
-		
-		hspeed += sign(target_x - x) * acceleration * dt
-		vspeed += sign(target_y - y) * acceleration * dt
-	
-		// resistance
-		vspeed *= resistance;
-	    hspeed *= resistance;
-		
-		// max speed
-		var slow_factor = has_present ? present_slow : 1;
-		speed = clamp(speed, -slow_factor * max_speed * dt, slow_factor * max_speed * dt);
-		
+		__acceleration(dt)
+		// pathing(dt);
 	}
 	
 	// var slow_factor = has_present ? present_slow : 1;
@@ -162,6 +155,43 @@ function movement(dt) {
 	if (debug) {
 		show_debug_message("Speed: " + string(speed / dt));
 	}
+	
+}
+
+function __acceleration(dt) {
+	hspeed += sign(target_x - x) * acceleration * dt
+	vspeed += sign(target_y - y) * acceleration * dt
+	
+	// resistance
+	vspeed *= resistance;
+	hspeed *= resistance;
+		
+	// max speed
+	var slow_factor = has_present ? present_slow : 1;
+	speed = clamp(speed, -slow_factor * max_speed * dt, slow_factor * max_speed * dt);
+}
+
+function pathing(dt) {
+	
+	//var elements = layer_get_all_elements("Decor");
+	//var instances = []; var j = 0;
+	//for (i = 0; i < array_length(elements); i+=1) {
+	//	if (layer_get_element_type(elements[i]) == layerelementtype_instance) {
+	//	    var layerelement = elements[i];
+	//	    var inst = layer_instance_get_instance(layerelement);
+	//		instances[j] = inst;
+	//		j += 1;
+	//	}
+	//}
+	
+	//for (i = 0; i < j; i+=1) {
+	//	instances[i].x += 1;
+	//}
+	
+	var slow_factor = has_present ? present_slow : 1;
+	mp_potential_step(target_x, target_y, slow_factor * max_speed * dt, false);
+	
+	speed = clamp(speed, -slow_factor * max_speed * dt, slow_factor * max_speed * dt);
 	
 }
 

@@ -3,7 +3,7 @@
     "name": "spr_decor_long_diamond_flipped",
     "path": "sprites/spr_decor_long_diamond_flipped/spr_decor_long_diamond_flipped.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
