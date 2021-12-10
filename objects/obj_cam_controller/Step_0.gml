@@ -65,4 +65,7 @@ if (virtual_init) {
 	
 }
 
+x = mouse_x - view_xview[0] + view_xport[0];// + camera_get_view_x(view_camera[0]);
+y =  mouse_y - view_yview[0];
+
 

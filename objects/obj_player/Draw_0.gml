@@ -45,10 +45,20 @@ function get_direction() {
 	
 }
 
+function get_direction_2() {
+	
+	var threshold = 0.01;
+	if (abs(hspeed) + abs(vspeed) < threshold) {
+		image_index = 0;
+	}
+
+}
+
 //---------------------//
 function main() {
 	get_state();
-	get_direction();
+	// get_direction();
+	get_direction_2();
 	draw_self();
 }
 

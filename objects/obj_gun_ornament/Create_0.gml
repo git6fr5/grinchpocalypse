@@ -14,10 +14,10 @@ function initialize() {
 	// firing
 	// fire_amount = 3;
 	bullet = obj_bullet_ornament;
-	fire_rate = 0.2;
+	fire_rate = 0.15;
 	fire_ticks = 0;
 	
-	fire_sound = sfx_gun_slingshot;
+	fire_sound = sfx_gun_ornament; //slingshot;
 	
 	// muzzle
 	muzzle_length = 10;
@@ -25,7 +25,7 @@ function initialize() {
 	muzzle_offset_y = 0;
 	
 	// ammo
-	max_ammo = 20;
+	max_ammo = 50;
 	ammo = max_ammo;
 	
 	button = mb_right;

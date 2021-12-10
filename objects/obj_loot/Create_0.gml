@@ -16,7 +16,7 @@ function initialize() {
 	if (is_falling) {	
 		y -= fall_length;
 	}
-	fall_speed = 128;
+	fall_speed = 64;
 	
 	loot = obj_gun_snowman;
 	is_weapon = true;

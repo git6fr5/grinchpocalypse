@@ -27,6 +27,10 @@ function movement(dt) {
 		hspeed = 0;
 		vspeed = 0;
 	}
+	else if (life_ticks > life_time - 17 / 12) {
+		hspeed = 0;
+		vspeed = 0;
+	}
 	else {
 		hspeed += sign(target_x - x) * acceleration * dt
 		vspeed += sign(target_y - y) * acceleration * dt

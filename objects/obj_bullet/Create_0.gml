@@ -7,7 +7,7 @@ function initialize() {
 	spin_magnitude = 5;
 	
 	// stats.
-	bullet_speed = 128;
+	bullet_speed = 192;
 	
 	// bullet_kickback = 5; // get this from the gun.
 	damage = -1;
@@ -23,6 +23,8 @@ function initialize() {
 	player_fired = true;
 	fire_direction_x = 0;
 	fire_direction_y = 0;
+	
+	snow_type = true;
 	
 }
 

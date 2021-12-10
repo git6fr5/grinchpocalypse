@@ -67,6 +67,7 @@ function pick_up_present() {
 			if (present.is_targetable && distance_to_point(present.x, present.y) < present_pickup_distance) {
 				instance_destroy(present);
 				has_present = true;
+				audio_play_sound(sfx_pick_up_present, 1, 0);
 				return;
 			}
 		}
@@ -127,6 +128,29 @@ function switch_weapon(dt) {
 			drop_present();
 		}
 	}
+}
+
+function state(dt) {
+	
+	if (prev_hp > hp) {
+		audio_play_sound(sfx_losing_point, 1, 0);
+	}
+	prev_hp = hp;
+	
+	if (hp <= 1) {
+		low_health = true;
+	}
+	
+	if (hp <= 0) {
+		fade_to_black = true;
+		fade_to_black_ticks += dt;
+		if (fade_to_black_ticks > fade_to_black_interval) {
+			var rm = asset_get_index("room_game_over");
+			room_goto(rm);
+		}
+	}
+	
+
 	
 }
 
@@ -136,6 +160,7 @@ function main() {
 	movement(dt);
 	check_present();
 	switch_weapon(dt);
+	state(dt);
 	// move_bounce_solid(false);
 	
 }

@@ -1,18 +1,20 @@
-draw_set_colour(c_black);
-var hp_text = "HP: " + string(hp);
-draw_text_transformed( 0, 0, hp_text, 1.5, 1.5, 0);
+//draw_set_colour(c_black);
+//var hp_text = "HP: " + string(hp);
+//draw_text_transformed( 0, 0, hp_text, 1.5, 1.5, 0);
 
-draw_set_colour(c_black);
-var ammo_text = "AMMO: " + string(primary_weapon.ammo);
-draw_text_transformed( 200, 0, ammo_text, 1.5, 1.5, 0);
+//draw_set_colour(c_black);
+//var ammo_text = "AMMO: " + string(primary_weapon.ammo);
+//draw_text_transformed( 200, 0, ammo_text, 1.5, 1.5, 0);
 
-draw_set_colour(c_black);
-score = 0;
-for (i = 0; i < instance_number(obj_base); i += 1) {
-	score += instance_find(obj_base, i).num_presents;
-}
-var score_text = "SCORE: " + string(score);
-draw_text_transformed( 400, 0, score_text, 1.5, 1.5, 0);
+//draw_set_colour(c_black);
+//score = 0;
+//for (i = 0; i < instance_number(obj_base); i += 1) {
+//	score += instance_find(obj_base, i).num_presents;
+//}
+//var score_text = "SCORE: " + string(score);
+//draw_text_transformed( 400, 0, score_text, 1.5, 1.5, 0);
+
+
 
 // -------------------------------------------------------- //
 
@@ -48,6 +50,10 @@ for (i = 0; i < max_hp; i += 1) {
 		
 		hp_pos_x -= scale* sprite_get_width(spr_ui_hp_block);
 		draw_sprite_stretched(spr_ui_hp_block, 0, hp_pos_x, hp_pos_y, _w, _h);
+	}
+	if (losing_point && i == (hp + 1)) {
+		// losing_point_index = 0;
+		// draw_sprite_stretched(spr_ui_present_tearing, 0, hp_pos_x + present_offset_x, hp_pos_y + present_offset_y, sprite_get_width(spr_ui_present_tearing) * scale, scale * sprite_get_width(spr_ui_present_tearing));
 	}
 	if (i < hp) {
 		draw_sprite_stretched(spr_ui_present, 0, hp_pos_x + present_offset_x, hp_pos_y + present_offset_y, sprite_get_width(spr_ui_present) * scale, scale * sprite_get_width(spr_ui_present));

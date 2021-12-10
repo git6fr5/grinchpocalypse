@@ -22,11 +22,24 @@ function check_for_presents() {
 		var x_offset = random_range(-50, 50);
 		var y_offset = random_range(50, 100);
 	
-		instance_create_depth(x + x_offset, y + y_offset, -(y + y_offset), obj_loot);
+		instance_create_depth(x + x_offset, y + y_offset, -(y + y_offset), pick_loot());
 		num_loots_dropped += 1;
 	}
+	
+	if (num_presents > prev_score) {
+		audio_play_sound(sfx_score_point, 1, 0);
+	}
+	prev_score = num_presents;
 
 }
+
+function pick_loot() {
+	
+	var loot_list = [obj_loot, obj_loot_popper];
+	return obj_loot_popper;
+	
+}
+	
 
 // ----------------- //
 function main() {

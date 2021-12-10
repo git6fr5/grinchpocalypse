@@ -15,7 +15,7 @@ function fire(dt) {
 		
 		audio_play_sound(fire_sound, 1, false);
 	}
-	
+
 }
 
 
@@ -37,8 +37,11 @@ function attach() {
 		y = obj_player.y;
 	}
 	
-	var mouse_x_xview = mouse_x - view_xview[0];
-	var mouse_y_yview = mouse_y - view_yview[0];
+	var mouse_x_xview = mouse_x - camera_get_view_x(view_camera[0]);
+	var mouse_y_yview = mouse_y - camera_get_view_y(view_camera[0]);
+	
+	// var game_x = mouse_x * (window_get_width()/room_width); 
+	// var game_y = mouse_y * (window_get_height()/room_height);
 	
 	dir_x = mouse_x_xview - obj_player.x;
 	dir_y = mouse_y_yview - obj_player.y;
@@ -50,6 +53,10 @@ function attach() {
 	
 	muzzle_offset_x = 0; // muzzle_length * dir_x / norm;
 	muzzle_offset_y = 0; // muzzle_length * dir_y / norm;
+	
+	y -= 8;
+	
+	depth = -(obj_player.y + 1);
 
 }
 

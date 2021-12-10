@@ -13,11 +13,11 @@ function initialize() {
 	
 	// firing
 	// fire_amount = 3;
-	bullet = obj_bullet;
+	bullet = obj_bullet_icicle;
 	fire_rate = 0.1;
 	fire_ticks = 0;
 	
-	fire_sound = sfx_gun_snowman;
+	fire_sound = sfx_gun_snowman;//slingshot;
 	
 	// muzzle
 	muzzle_length = 10;

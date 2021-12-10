@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.2,
+  "volume": 0.25,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_gun_snowman.mp3",
-  "duration": 1.07102,
+  "duration": 0.548571,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

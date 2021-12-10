@@ -8,6 +8,10 @@ function movement(dt) {
 
 function fall(dt) {
 	
+
+	
+	//
+	
 	var _dt = dt;
 	if (fall_distance > fall_length * 0.9) {
 		_dt *= 0.5;
@@ -46,6 +50,7 @@ function check_for_base() {
 }
 
 function virtual_init() {
+	audio_play_sound(sfx_bells_loot, 1, false);
 
 	if (x < room_width / 2) {
 		audio_play_sound(sfx_bells_left, 1, false);

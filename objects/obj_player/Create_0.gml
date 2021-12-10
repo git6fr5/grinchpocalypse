@@ -14,6 +14,12 @@ function initialize() {
 	max_hp = 3;
 	hp = max_hp;
 	
+	// trackers
+	prev_hp = hp;
+	losing_point_index = 0;
+	losing_point = false;
+	_score = 0;
+	
 	// weapons
 	primary_weapon = instance_create_depth(x, y, -y, obj_gun_snowpistol);
 	primary_weapon.is_active = true;
@@ -30,6 +36,13 @@ function initialize() {
 	
 	// sprites 
 	cycle_length = 8
+	
+	//
+	low_health = false;
+	fade_to_black = false;
+	fade_to_black_ticks = 0;
+	fade_to_black_interval = 2;
+	
 
 }
 

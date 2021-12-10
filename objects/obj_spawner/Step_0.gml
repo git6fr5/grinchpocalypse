@@ -23,6 +23,12 @@ function spawn(dt) {
 		spawn_ticks = 0;
 		// spawn_interval = 600;
 	}
+	
+	spawn_rate_increase_ticks += dt;
+	if (spawn_rate_increase_ticks > spawn_rate_increase_interval) {
+		max_spawn_objects += 1;
+		spawn_rate_increase_ticks = 0;
+	}
 
 }
 

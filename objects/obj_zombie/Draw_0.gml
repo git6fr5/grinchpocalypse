@@ -2,7 +2,11 @@
 //---------------------//
 function get_state() {
 	
-	if (grabbing_present) {
+	if (frozen_level > 0) {
+		sprite_index = spr_grinch_frozen;
+		cycle_length = 5;
+	}
+	else if (grabbing_present) {
 		sprite_index = spr_grinch_picking_up_present;
 		cycle_length = 7;
 	}
@@ -13,10 +17,27 @@ function get_state() {
 	}
 	else if (is_fighting_for_present) {
 		sprite_index = spr_grinch_fighting_for_present;
+		if (fighting_ticks <  (7.95/12)) {
+			sprite_index = spr_grinch_start_fight;
+		}
+		else if (fighting_ticks > max_fight_duration - (8.05/12)) {
+			if (fighting_ticks < max_fight_duration - (7.05/12)){
+				image_index = 0;
+			}
+			if (fighting_ticks > max_fight_duration - (0.95/12)){
+				image_index = 6;
+			}
+			sprite_index = spr_grinch_end_fight;
+		}
 		cycle_length = 8;
 	}
 	else if (is_knockbacked) {
-		sprite_index = spr_grinch_knockback; // spr_grinch_knockbacked;
+		if (snow_type_knockback) {
+			sprite_index = spr_grinch_knockback; // spr_grinch_knockbacked;
+		}
+		else {
+			sprite_index = spr_grinch_knockback_no_snow;
+		}
 		cycle_length = 1;
 		//show_debug_message("b");
 	}
@@ -34,6 +55,12 @@ function get_state() {
 }
 
 function get_direction() {
+	
+	if (frozen_level > 0) {
+		image_index = frozen_level - 1;
+		image_index = min(4, image_index);
+		return;
+	}
 	
 	// down
 	var offset = 3;
@@ -55,9 +82,12 @@ function get_direction() {
 		}
 	}
 	
-	if (is_getting_up) {
+	if (sprite_index == spr_grinch_getting_up) {
 		// is_getting_up = false;
 		// show_debuf
+		if (is_sitting) {
+			image_index = 0;
+		}
 	}
 	
 	if (is_fighting_for_present) {

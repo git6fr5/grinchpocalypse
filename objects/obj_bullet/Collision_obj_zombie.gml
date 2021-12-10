@@ -4,7 +4,8 @@ function hurt() {
 	other.anger -= damage;
 	
 	obj_cam_controller.shake = true;
-	
+	other.snow_type_knockback = snow_type;
+			 
 	knockback(other, 1);
 	if (other.has_present) {
 		 other.has_present = false;

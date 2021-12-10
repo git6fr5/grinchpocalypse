@@ -37,6 +37,7 @@ function fall(dt) {
 	if (fall_distance >= fall_length) {
 		is_targetable = true;
 		is_falling = false;
+		audio_play_sound(sfx_drop_present, 1, 0);
 	}
 	
 	depth = -room_height;
@@ -68,8 +69,10 @@ function virtual_init() {
 		y = origin_y;
 		is_falling = false;
 		is_dropped = false;
+		audio_play_sound(sfx_drop_present, 1, 0);
 	}
 	else {
+		audio_play_sound(sfx_bells_present, 1, false);
 		if (x < room_width / 2) {
 			audio_play_sound(sfx_bells_left, 1, false);
 		}

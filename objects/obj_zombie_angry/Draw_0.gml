@@ -10,6 +10,15 @@ function get_state() {
 		sprite_index = spr_grinch_angry_steal;
 		cycle_length = 11;
 	}
+	else if (life_ticks > life_time - 17 / 12) {
+		if (life_ticks < life_time - 16 / 12) {
+			image_index = 0;
+		}
+		if (life_ticks > life_time - 1 / 12) {
+			image_index = 15;
+		}
+		sprite_index = spr_grinch_calm_down;
+	}
 	else {
 		sprite_index = spr_grinch_angry;
 		cycle_length = 4;

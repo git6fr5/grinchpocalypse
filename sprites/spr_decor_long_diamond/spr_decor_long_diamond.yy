@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "masks",
+    "path": "folders/Sprites/masks.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_decor_long_diamond",

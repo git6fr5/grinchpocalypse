@@ -1,7 +1,10 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ammo",
+    "path": "sprites/spr_ammo/spr_ammo.yy",
+  },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -25,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "entities",
+    "path": "folders/Objects/entities.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_cam_controller",

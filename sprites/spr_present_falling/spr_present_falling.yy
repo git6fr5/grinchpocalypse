@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "items",
+    "path": "folders/Sprites/items.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_present_falling",

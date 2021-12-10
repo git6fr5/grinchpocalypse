@@ -26,7 +26,7 @@ function initialize() {
 	cycle_length = 4;
 	
 	// life
-	life_time = 5;
+	life_time = 10;
 	life_ticks = 0;
 	
 	get_target();

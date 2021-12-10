@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "player and tree",
+    "path": "folders/Sprites/player and tree.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_player_with_present",

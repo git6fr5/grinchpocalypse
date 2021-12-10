@@ -45,7 +45,13 @@ function rotate() {
 	image_angle = 180 * angle / pi;
 }
 
+function rotate_2() {
+	
+	image_angle = point_direction(x,y,mouse_x,mouse_y);
+}
+
 function main() {
+	// rotate_2();
 	rotate();
 	draw_self();
 }

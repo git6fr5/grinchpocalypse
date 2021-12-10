@@ -27,11 +27,17 @@ function initialize() {
 	knockback_vspeed = 0;
 	knockback_hspeed = 0;
 	
+	snow_type_knockback = false;
+	
 	// getting up
 	is_getting_up = false;
 	is_fighting_for_present = false;
 	fighting_ticks = 0;
 	max_fight_duration = 7;
+	
+	is_sitting = false;
+	sitting_ticks = 0;
+	sitting_duration = 1;
 	
 	// ai
 	think_interval = 0.25;
@@ -47,8 +53,8 @@ function initialize() {
 	
 	// stats
 	anger = 0;
-	friendly_threshold = -5;
-	angry_threshold = 1;
+	friendly_threshold = -3;
+	angry_threshold = 3;
 	present_slow = 0.5;
 	
 	// sprites
@@ -59,6 +65,11 @@ function initialize() {
 	laughing_ticks = 0;
 	laugh_interval = 1;
 	laughs = [sfx_grinch_happy_1, sfx_grinch_happy_2, sfx_grinch_happy_3, sfx_grinch_happy_4, sfx_grinch_happy_5, sfx_grinch_happy_6]
+
+	// freeze
+	frozen_level = 0;
+	frozen_interval = 3;
+	frozen_ticks = 0;
 
 }
 
@@ -148,7 +159,7 @@ function get_target(dt = 0) {
 	}
 	
 	
-	target_y += 8;
+	// target_y += 8;
 	
 	if (has_present) {			
 		var center_x = room_width / 2;

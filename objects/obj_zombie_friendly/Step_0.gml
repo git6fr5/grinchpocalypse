@@ -13,7 +13,11 @@ function fire() {
 			new_bullet.fire_direction_x = zomb.x - x;
 			new_bullet.fire_direction_y = zomb.y - y;
 			new_bullet.player_fired = false;
+			
+			is_throwing = true;
+			audio_play_sound(sfx_throw, 0, 0);
 		}
+		
 	}
 }
 
@@ -24,8 +28,14 @@ function main() {
 	if (fire_ticks > fire_interval) {
 		fire();
 		fire_ticks = 0;
+		life_ticks = 0;
 	}
 	
+	life_ticks += dt;
+	if (life_ticks > life_time) {
+		instance_create_depth(x, y, -y, obj_zombie_angry);
+		instance_destroy();
+	}
 }
 
 main();

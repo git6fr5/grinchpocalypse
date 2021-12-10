@@ -16,7 +16,7 @@ function initialize() {
 	if (is_falling) {	
 		y -= fall_length;
 	}
-	fall_speed = 128;
+	fall_speed = 64;
 	
 	b_virtual_init = true;
 	

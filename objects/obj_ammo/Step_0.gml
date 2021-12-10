@@ -46,7 +46,7 @@ function check_for_base() {
 }
 
 function virtual_init() {
-
+	audio_play_sound(sfx_bells_ammo, 1, false);
 	if (x < room_width / 2) {
 		audio_play_sound(sfx_bells_left, 1, false);
 	}

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_gun_snowman",
-    "path": "sprites/spr_gun_snowman/spr_gun_snowman.yy",
+    "name": "spr_loot_snowman",
+    "path": "sprites/spr_loot_snowman/spr_loot_snowman.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "entities",
+    "path": "folders/Objects/entities.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_loot",

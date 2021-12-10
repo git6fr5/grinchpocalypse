@@ -15,6 +15,9 @@ function initialize() {
 	spawn_objects = [];
 	
 	depth = -y;
+	
+	spawn_rate_increase_ticks = 0;
+	spawn_rate_increase_interval = 5; // every 5 seconds the spawn rate increases by 1
 
 }
 
