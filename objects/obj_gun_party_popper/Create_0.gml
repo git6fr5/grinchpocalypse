@@ -35,7 +35,7 @@ function initialize() {
 	}
 	
 	fire_count = 0;
-	num_fires = 1;
+	num_fires = infinity;
 	
 }
 

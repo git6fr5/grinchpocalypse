@@ -3,7 +3,7 @@
     "name": "spr_dec_house8",
     "path": "sprites/spr_dec_house8/spr_dec_house8.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "spr_decor_big_diamond",

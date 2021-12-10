@@ -141,10 +141,11 @@ function state(dt) {
 		low_health = true;
 	}
 	
+	fade_to_black = false;
 	if (hp <= 0) {
 		fade_to_black = true;
 		fade_to_black_ticks += dt;
-		if (fade_to_black_ticks > fade_to_black_interval) {
+		if (fade_to_black_ticks > fade_to_black_interval + 2) {
 			var rm = asset_get_index("room_game_over");
 			room_goto(rm);
 		}

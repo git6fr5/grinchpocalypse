@@ -3,7 +3,7 @@
     "name": "spr_dec_fence_lf_bot",
     "path": "sprites/spr_dec_fence_lf_bot/spr_dec_fence_lf_bot.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "spr_decor_small_diamond",

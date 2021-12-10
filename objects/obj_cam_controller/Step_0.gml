@@ -44,7 +44,7 @@ function ambient_laughing() {
 function main() {
 	var dt = delta_time / 1000000;
 	camera_set_view_pos(view_camera[0], 0, 0);
-	if (shake) {
+	if (shake || obj_player.hp < 1) {
 		screen_shake(dt);
 	}
 	
@@ -57,10 +57,10 @@ main();
 
 if (virtual_init) {
 		
-	for (i = 0; i < instance_number(obj_spawner); i += 1) {
-		var spawner = instance_find(obj_spawner, i);
-		spawner.spawn_ticks = spawner.spawn_interval / (i + 1);
-	}
+	//for (i = 0; i < instance_number(obj_spawner); i += 1) {
+	//	var spawner = instance_find(obj_spawner, i);
+	//	spawner.spawn_ticks = spawner.spawn_interval / (i + 1);
+	//}
 	virtual_init = false;
 	
 }

@@ -3,7 +3,7 @@
     "name": "spr_dec_snowwall_rt",
     "path": "sprites/spr_dec_snowwall_rt/spr_dec_snowwall_rt.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "spr_decor_small_diamond",

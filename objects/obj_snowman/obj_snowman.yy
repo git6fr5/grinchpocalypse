@@ -3,7 +3,7 @@
     "name": "spr_dec_snowman",
     "path": "sprites/spr_dec_snowman/spr_dec_snowman.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "spr_decor_small_diamond",

@@ -3,7 +3,7 @@
     "name": "spr_dec_rock1",
     "path": "sprites/spr_dec_rock1/spr_dec_rock1.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": {
     "name": "spr_decor_small_diamond",

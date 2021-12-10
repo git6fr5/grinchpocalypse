@@ -29,7 +29,9 @@ for (i = emitter_steps_start; i < 100; i+= 1) {
 
 #endregion
 
-#region muzzle
+#region fireworks
+
+firework_emitter = part_emitter_create(particle_snow_setup.particle_system);
 
 #endregion
 
