@@ -3,17 +3,17 @@ if (room_get_name(room) == "room_level_2") {
 	
 	// Zombies
 	max_zombies_on_screen = 5;
-	interval_between_increasing_max_zombies_on_screen = 7;
+	interval_between_increasing_max_zombies_on_screen = 600;
 	interval_between_zombie_spawns_in_seconds = 12; // "1 / zombie spawn rate"
 	
 	// Presents
 	max_present_drops_on_screen = 1;
-	interval_between_increasing_max_presents_on_screen = 5;
+	interval_between_increasing_max_presents_on_screen = 600;
 	interval_between_present_drops_in_seconds = 5; // "1 / present drop rate"
 	
 	// Ammo
 	max_ammo_drops_on_screen = 1;
-	interval_between_increasing_max_ammo_on_screen = infinity;
+	interval_between_increasing_max_ammo_on_screen = 600;
 	interval_between_ammo_drops_in_seconds = 45 // "1 / ammo drop rate"
 	
 	// Objectives
@@ -25,7 +25,7 @@ if (room_get_name(room) == "room_level_2") {
 
 
 // ---------------- //
-
+// everything under this line is ugly.
 function setup() {
 	for (i = 0; i < instance_number(obj_spawner); i += 1) {
 		var spawner = instance_find(obj_spawner, i);
@@ -56,7 +56,7 @@ function setup() {
 		spawner.spawn_interval = interval_between_ammo_drops_in_seconds;
 		spawner.spawn_rate_increase_interval = interval_between_increasing_max_ammo_on_screen; // every 5 seconds the spawn rate increases by  
 		
-		spawner.spawn_ticks = random_range(0, spawner.spawn_interval);
+		spawner.spawn_ticks = spawner.spawn_interval - 1; // random_range(0, spawner.spawn_interval);
 		
 	}
 	
@@ -75,3 +75,5 @@ function setup() {
 	 obj_player.hp = obj_player.max_hp;
 	
 }
+
+setup();

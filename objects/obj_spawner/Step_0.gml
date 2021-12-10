@@ -2,7 +2,7 @@
 // ----------------- //
 function spawn(dt) {
 	
-	if (num_spawn_objects <= max_spawn_objects) {
+	if (num_spawn_objects < max_spawn_objects) {
 		spawn_ticks += dt
 	}
 	if (spawn_ticks > spawn_interval && num_spawn_objects < max_spawn_objects) {

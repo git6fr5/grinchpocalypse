@@ -47,11 +47,11 @@ function objects() {
 }
 
 function reset_spawns() {
-	spawn_ticks = 0;
 	for (i = 0; i < instance_number(obj_spawner_presents); i += 1) {
 		var new_spawner = instance_find(obj_spawner_presents, i);
 		new_spawner.spawn_ticks = random_range(0.5, 1);
 	}
+	spawn_ticks = 0;
 }
 
 // ----------------- //
