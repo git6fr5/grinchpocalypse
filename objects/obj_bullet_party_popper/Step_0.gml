@@ -11,7 +11,7 @@ function set_direction() {
 	var norm = power(norm_squared, 0.5);
 	
 	hspeed = dir_x / norm * (bullet_speed * dt);
-	vspeed = dir_y / norm * (bullet_speed * dt) - 2;
+	vspeed = dir_y / norm * (bullet_speed * dt); // - 2;
 
 }
 
@@ -32,13 +32,13 @@ function set_direction_2() {
 function explode() {
 	
 	for (i = 0; i < frags; i+= 1) {
-		var new_bullet = instance_create_depth(x + random_range(-1.99, 1.99), y + random_range(-1.99, 1.99), -y, obj_bullet_ornament);
+		var new_bullet = instance_create_depth(x + random_range(-1.99, 1.99), y + random_range(-1.99, 1.99), -y, obj_bullet_frag);
 		obj_cam_controller.shake = true;
 		
 		new_bullet.fire_direction_x = new_bullet.x - x;
 		new_bullet.fire_direction_y = new_bullet.y - y;
 		new_bullet.player_fired = false;
-		new_bullet.bullet_speed = random_range(frag_min_speed, frag_max_speed);
+		// new_bullet.bullet_speed = random_range(frag_min_speed, frag_max_speed);
 	}
 		
 	audio_play_sound(impact_sound, 1, false);
@@ -62,10 +62,15 @@ life_ticks += dt;
 if (life_ticks >= init_ticks && init == false) {
 	init = true;
 }
-if (life_ticks >= 0.75) {
+if (life_ticks >= 3) {
 	
+	// explode();
+	instance_destroy();
+}
+
+if (x == clamp(x, target_x - 15, target_x + 15) && y == clamp(y, target_y - 15, target_y + 15)) {
 	explode();
 	instance_destroy();
 }
 
-vspeed -= _gravity * dt;
+// vspeed -= _gravity * dt;

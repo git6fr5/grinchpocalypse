@@ -44,7 +44,18 @@ function ambient_laughing() {
 function main() {
 	var dt = delta_time / 1000000;
 	camera_set_view_pos(view_camera[0], 0, 0);
-	if (shake || obj_player.hp < 1) {
+	
+	if (obj_player.loot_weapon != noone) {
+		shake_magnitude = 3;
+		shake_duration = 0.2;
+	}
+	else {
+		shake_magnitude = 2;
+		shake_duration = 0.1;
+	}
+
+	
+	if (shake || obj_player.hp < 1 || score >= obj_level_difficulty_setter.presents_to_win) {
 		screen_shake(dt);
 	}
 	

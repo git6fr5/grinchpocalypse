@@ -5,10 +5,7 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": {
-    "name": "spr_decor_big_diamond",
-    "path": "sprites/spr_decor_big_diamond/spr_decor_big_diamond.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
     "name": "obj_zzz_decor",

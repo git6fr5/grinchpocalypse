@@ -27,8 +27,8 @@ if (room_get_name(room) == "room_level_1") {
 	
 	// Objectives
 	presents_to_win = 4; // Make sure this is a multiple of 4
-	presents_per_loot_drop = 4;
-	player_hp = 1;
+	presents_per_loot_drop = 1;
+	player_hp = 5;
 	
 }
 

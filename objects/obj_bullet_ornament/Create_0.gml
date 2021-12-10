@@ -3,7 +3,7 @@
 function initialize() {
 	
 	// sprite
-	bullet_index = random_range(0, 5);
+	bullet_index = random_range(0, 16);
 	spin_magnitude = 5;
 	
 	// stats.

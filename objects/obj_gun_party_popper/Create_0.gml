@@ -14,7 +14,7 @@ function initialize() {
 	// firing
 	// fire_amount = 3;
 	bullet = obj_bullet_party_popper;
-	fire_rate = 0.5;
+	fire_rate = 0.7;
 	fire_ticks = 0;
 	
 	fire_sound = sfx_throw;

@@ -133,6 +133,7 @@ function switch_weapon(dt) {
 function state(dt) {
 	
 	if (prev_hp > hp) {
+		losing_point = true;
 		audio_play_sound(sfx_losing_point, 1, 0);
 	}
 	prev_hp = hp;

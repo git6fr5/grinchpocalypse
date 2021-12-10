@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_losing_point.mp3",
-  "duration": 2.35102,
+  "duration": 3.892245,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
