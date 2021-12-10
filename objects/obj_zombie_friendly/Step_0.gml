@@ -16,6 +16,8 @@ function fire() {
 			
 			is_throwing = true;
 			audio_play_sound(sfx_throw, 0, 0);
+			
+			life_ticks = 0;
 		}
 		
 	}
@@ -28,7 +30,6 @@ function main() {
 	if (fire_ticks > fire_interval) {
 		fire();
 		fire_ticks = 0;
-		life_ticks = 0;
 	}
 	
 	life_ticks += dt;

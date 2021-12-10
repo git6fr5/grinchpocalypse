@@ -25,7 +25,7 @@ function initialize() {
 	muzzle_offset_y = 0;
 	
 	// ammo
-	max_ammo = 50;
+	max_ammo = 25;
 	ammo = max_ammo;
 	
 	button = mb_right;

@@ -18,7 +18,8 @@ function initialize() {
 	
 	spawn_rate_increase_ticks = 0;
 	spawn_rate_increase_interval = 5; // every 5 seconds the spawn rate increases by 1
-
+	reset_spawns();
+	
 }
 
 function objects() {
@@ -43,6 +44,14 @@ function objects() {
 		num_spawn_objects += 1;
 	}
 	
+}
+
+function reset_spawns() {
+	spawn_ticks = 0;
+	for (i = 0; i < instance_number(obj_spawner_presents); i += 1) {
+		var new_spawner = instance_find(obj_spawner_presents, i);
+		new_spawner.spawn_ticks = random_range(0.5, 1);
+	}
 }
 
 // ----------------- //

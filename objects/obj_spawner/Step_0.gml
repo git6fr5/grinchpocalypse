@@ -2,7 +2,7 @@
 // ----------------- //
 function spawn(dt) {
 	
-	if (num_spawn_objects < max_spawn_objects) {
+	if (num_spawn_objects <= max_spawn_objects) {
 		spawn_ticks += dt
 	}
 	if (spawn_ticks > spawn_interval && num_spawn_objects < max_spawn_objects) {
@@ -20,7 +20,8 @@ function spawn(dt) {
 		
 		var new_spawn_object = instance_create_depth(x + offset_x, y + offset_y, -y, spawn_object);
 		spawn_objects[array_length(spawn_objects)] = new_spawn_object;
-		spawn_ticks = 0;
+		
+		reset_spawns();
 		// spawn_interval = 600;
 	}
 	

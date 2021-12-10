@@ -24,10 +24,41 @@ function initialize() {
 function objects() {
 
 	num_spawn_objects = 0;
-	num_spawn_objects += instance_number(obj_zombie);
-	num_spawn_objects += instance_number(obj_zombie_friendly);
-	num_spawn_objects += instance_number(obj_zombie_angry);
+	
+	for (i = 0; i < instance_number(obj_zombie); i += 1) {
+		var zomb = instance_find(obj_zombie, i);
+		if (zomb.is_fighting_for_present) {
+			num_spawn_objects += 2;
+		}
+		else {
+			num_spawn_objects += 1;
+		}
+	}
+	
+	for (i = 0; i < instance_number(obj_zombie_friendly); i += 1) {
+		
+		num_spawn_objects += 1;
 
+	}
+	
+	for (i = 0; i < instance_number(obj_zombie_angry); i += 1) {
+		var ang_zomb = instance_find(obj_zombie_angry, i);
+		if (ang_zomb.is_stealing) {
+			num_spawn_objects += 2;
+		}
+		else {
+			num_spawn_objects += 1;
+		}
+	}
+
+}
+
+function reset_spawns() {
+	spawn_ticks = 0;
+	for (i = 0; i < instance_number(obj_spawner); i += 1) {
+		var new_spawner = instance_find(obj_spawner, i);
+		new_spawner.spawn_ticks = 0;
+	}
 }
 
 // ----------------- //

@@ -81,6 +81,7 @@
     {"id":{"name":"spr_dec_house3","path":"sprites/spr_dec_house3/spr_dec_house3.yy",},"order":11,},
     {"id":{"name":"spr_dec_cliff_lf_top","path":"sprites/spr_dec_cliff_lf_top/spr_dec_cliff_lf_top.yy",},"order":31,},
     {"id":{"name":"spr_gun_snowman","path":"sprites/spr_gun_snowman/spr_gun_snowman.yy",},"order":3,},
+    {"id":{"name":"spr_grinch_hating_life","path":"sprites/spr_grinch_hating_life/spr_grinch_hating_life.yy",},"order":25,},
     {"id":{"name":"sfx_grinch_getting_angry","path":"sounds/sfx_grinch_getting_angry/sfx_grinch_getting_angry.yy",},"order":10,},
     {"id":{"name":"obj_sign1","path":"objects/obj_sign1/obj_sign1.yy",},"order":14,},
     {"id":{"name":"obj_snowwall_rt_bot","path":"objects/obj_snowwall_rt_bot/obj_snowwall_rt_bot.yy",},"order":30,},
