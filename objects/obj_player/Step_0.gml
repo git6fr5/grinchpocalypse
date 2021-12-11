@@ -96,6 +96,7 @@ function switch_weapon(dt) {
 	}
 	
 	if (loot_weapon != noone) {
+		
 		loot_ticks += dt
 		if (loot_ticks > loot_duration) {
 			instance_destroy(loot_weapon);

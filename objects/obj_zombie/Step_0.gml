@@ -38,7 +38,13 @@ function ai(dt) {
 		grabbing_present = false;
 	}
 	
-	if (is_fighting_for_present) {
+	if (is_fighting_for_present) {	
+		
+		if (random_range(0, 0.99) < 0.01) {
+			var grunt_index = floor(random_range(0, 2.99));
+			audio_play_sound(_grunts[grunt_index], 0, false);
+		}
+		
 		fighting_ticks += dt;
 		if (fighting_ticks > max_fight_duration) {
 			

@@ -138,3 +138,7 @@ function main() {
 }
 
 main();
+
+if (!audio_is_playing(msc_main_a) && !audio_is_playing(msc_main_b)) {
+	audio_play_sound(msc_main_b, 1, true);
+}

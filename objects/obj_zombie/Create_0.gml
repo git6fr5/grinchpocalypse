@@ -70,6 +70,8 @@ function initialize() {
 	frozen_level = 0;
 	frozen_interval = 3;
 	frozen_ticks = 0;
+	
+	_grunts = [sfx_grunt_1, sfx_grunt_2, sfx_grunt_3];
 
 }
 

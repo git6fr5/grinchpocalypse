@@ -105,3 +105,13 @@ obj_base.presents_per_level = presents_to_win / 4;
 obj_base.presents_per_loot = presents_per_loot_drop;
 obj_player.max_hp = player_hp;
 obj_player.hp = obj_player.max_hp;
+
+if (!audio_is_playing(msc_main_a)) {
+	audio_stop_sound(msc_title);
+	audio_stop_sound(msc_main_b);
+	audio_play_sound(msc_main_a, 1, false);
+}
+
+if (!audio_is_playing(sfx_ambient_snow)) {
+	audio_play_sound(sfx_ambient_snow, 1, true);
+}

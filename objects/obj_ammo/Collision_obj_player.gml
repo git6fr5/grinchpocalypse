@@ -8,6 +8,8 @@ function activate() {
 		if (obj_gun_ornament.ammo > obj_gun_ornament.max_ammo) {
 			obj_gun_ornament.ammo = obj_gun_ornament.max_ammo;
 		}
+		
+		audio_play_sound(sfx_reload, 1, false);
 	}
 	
 	instance_destroy();
