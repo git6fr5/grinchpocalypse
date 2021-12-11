@@ -8,4 +8,6 @@ function activate() {
 	instance_destroy();
 }
 
-activate();
+if (obj_player.loot_weapon == noone) {
+	activate();
+}

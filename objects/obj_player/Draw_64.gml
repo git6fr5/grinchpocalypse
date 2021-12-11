@@ -34,6 +34,15 @@ var hp_pos_y = (room_height - 2) * scale - grinch_h;
 
 draw_sprite_stretched(spr_ui_grinch, 0, hp_pos_x, hp_pos_y, grinch_w, grinch_h);
 
+//if (losing_point) {
+//	var grinch_smiling = instance_create_depth(x, y, 0, obj_ui_grinch_smiling)
+//	grinch_smiling.hp_pos_x = hp_pos_x;
+//	grinch_smiling.present_offset_x = present_offset_x;
+//	grinch_smiling.hp_pos_y = hp_pos_y;
+//	grinch_smiling.present_offset_y = present_offset_y;
+//	grinch_smiling.scale = scale;
+//}
+
 for (i = 0; i < max_hp; i += 1) {
 	if (i == max_hp - 1) {
 		
@@ -60,6 +69,7 @@ for (i = 0; i < max_hp; i += 1) {
 		tearing_present.present_offset_y = present_offset_y;
 		tearing_present.scale = scale;
 		losing_point = false;
+		
 	}
 	if (i < hp) {
 		draw_sprite_stretched(spr_ui_present, 0, hp_pos_x + present_offset_x, hp_pos_y + present_offset_y, sprite_get_width(spr_ui_present) * scale, scale * sprite_get_width(spr_ui_present));

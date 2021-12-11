@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_particle_shadow",
-    "path": "sprites/spr_particle_shadow/spr_particle_shadow.yy",
+    "name": "spr_bullet_ornament",
+    "path": "sprites/spr_bullet_ornament/spr_bullet_ornament.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,6 +26,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_zombie","path":"objects/obj_zombie/obj_zombie.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

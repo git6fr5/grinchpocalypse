@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_dec_fence_rt",
-    "path": "sprites/spr_dec_fence_rt/spr_dec_fence_rt.yy",
+    "name": "spr_dec_fence_lf_top",
+    "path": "sprites/spr_dec_fence_lf_top/spr_dec_fence_lf_top.yy",
   },
   "solid": false,
   "visible": true,

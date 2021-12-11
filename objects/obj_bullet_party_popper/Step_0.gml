@@ -74,3 +74,4 @@ if (x == clamp(x, target_x - 15, target_x + 15) && y == clamp(y, target_y - 15, 
 }
 
 // vspeed -= _gravity * dt;
+speed=bullet_speed * dt;

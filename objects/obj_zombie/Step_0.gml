@@ -51,6 +51,8 @@ function ai(dt) {
 			fighting_ticks = 0;
 			
 			obj_player.hp -= 1;
+			instance_create_depth(x, y - 10, 0, obj_ui_grinch_smiling)
+
 		}
 	}
 	else {
@@ -66,6 +68,8 @@ function collision() {
 		if ((x < 0 || x > room_width) && y < 0 || y > room_height) {
 			// take a point off the player.
 			obj_player.hp -= 1;
+			instance_create_depth(x, y - 10, 0, obj_ui_grinch_smiling)
+
 			instance_destroy();
 			audio_play_sound(sfx_losing_point, 1, 0);
 		}
@@ -98,6 +102,11 @@ function collision() {
 		
 		// hitting a present
 		if (target_present != noone  && instance_exists(target_present)) {
+			
+			if (frozen_level > 0) {
+				return;
+			}
+			
 			show_debug_message("reached a present");
 			if (!has_present && !is_knockbacked && target_present.is_targetable) {
 				has_present = true;

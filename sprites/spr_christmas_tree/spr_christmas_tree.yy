@@ -7,14 +7,14 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 5,
-  "bbox_right": 77,
-  "bbox_top": 6,
+  "bbox_left": 6,
+  "bbox_right": 79,
+  "bbox_top": 5,
   "bbox_bottom": 142,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 79,
+  "width": 80,
   "height": 144,
   "textureGroupId": {
     "name": "Default",
@@ -24,21 +24,21 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"95b14fa6-c53a-47e9-988e-216597cc6678","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95b14fa6-c53a-47e9-988e-216597cc6678","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"b3c5e48e-c0a7-4f14-92e5-100b06d33a73","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"95b14fa6-c53a-47e9-988e-216597cc6678","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"22a3b0e4-32d6-4719-abde-ec1c41786513","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"22a3b0e4-32d6-4719-abde-ec1c41786513","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"b3c5e48e-c0a7-4f14-92e5-100b06d33a73","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"22a3b0e4-32d6-4719-abde-ec1c41786513","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c31af4a5-b8b1-48de-951c-3074e1aa2d88","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c31af4a5-b8b1-48de-951c-3074e1aa2d88","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"b3c5e48e-c0a7-4f14-92e5-100b06d33a73","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"c31af4a5-b8b1-48de-951c-3074e1aa2d88","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"93dfc40b-26de-4133-b0ad-514d16e2a47e","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"93dfc40b-26de-4133-b0ad-514d16e2a47e","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"b3c5e48e-c0a7-4f14-92e5-100b06d33a73","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"93dfc40b-26de-4133-b0ad-514d16e2a47e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"11eb6ece-7e27-4086-8137-85cb98822a32","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"11eb6ece-7e27-4086-8137-85cb98822a32","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"b3c5e48e-c0a7-4f14-92e5-100b06d33a73","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"11eb6ece-7e27-4086-8137-85cb98822a32","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cdfb6594-7e69-4eca-8b91-cca0ea36acf3","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cdfb6594-7e69-4eca-8b91-cca0ea36acf3","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"26e1c617-9e18-4fc4-959f-08a44e9ff5f2","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"cdfb6594-7e69-4eca-8b91-cca0ea36acf3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3b2560e3-ee21-4afd-bcae-2be0107e1491","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3b2560e3-ee21-4afd-bcae-2be0107e1491","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"26e1c617-9e18-4fc4-959f-08a44e9ff5f2","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"3b2560e3-ee21-4afd-bcae-2be0107e1491","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"467631bd-c9ac-4797-b6ca-2a30fe19be13","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"467631bd-c9ac-4797-b6ca-2a30fe19be13","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"26e1c617-9e18-4fc4-959f-08a44e9ff5f2","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"467631bd-c9ac-4797-b6ca-2a30fe19be13","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c3f84892-b61f-43ca-ba8a-ad553d5bea1c","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c3f84892-b61f-43ca-ba8a-ad553d5bea1c","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"26e1c617-9e18-4fc4-959f-08a44e9ff5f2","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"c3f84892-b61f-43ca-ba8a-ad553d5bea1c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"aa8548b1-7cb8-44bc-9981-a6ac0b412deb","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"aa8548b1-7cb8-44bc-9981-a6ac0b412deb","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"LayerId":{"name":"26e1c617-9e18-4fc4-959f-08a44e9ff5f2","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","name":"aa8548b1-7cb8-44bc-9981-a6ac0b412deb","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_christmas_tree","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},
@@ -53,11 +53,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8a844965-429f-4d70-8980-8cd9e9e7645b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95b14fa6-c53a-47e9-988e-216597cc6678","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6a0a903f-cec5-41bb-b962-8370902faff9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22a3b0e4-32d6-4719-abde-ec1c41786513","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"d97aa30b-ca35-4ae9-97ee-308a45097532","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c31af4a5-b8b1-48de-951c-3074e1aa2d88","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"8a7afa45-a59a-44a8-b24b-8754058a9392","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93dfc40b-26de-4133-b0ad-514d16e2a47e","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"07cda068-b86d-4177-a57f-4dc5b377d74f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"11eb6ece-7e27-4086-8137-85cb98822a32","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ad0e7206-d41c-4345-87ac-65f82d8e5085","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cdfb6594-7e69-4eca-8b91-cca0ea36acf3","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b1dda3a8-3fae-4399-ba43-c7ed514627b1","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3b2560e3-ee21-4afd-bcae-2be0107e1491","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1fe7e33d-d43e-44ba-a47a-9349909870ac","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"467631bd-c9ac-4797-b6ca-2a30fe19be13","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"59532fee-9236-47e9-9bc6-2f3f34b0e9e4","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3f84892-b61f-43ca-ba8a-ad553d5bea1c","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ed036219-d82c-4f62-bccb-15443b1ade51","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa8548b1-7cb8-44bc-9981-a6ac0b412deb","path":"sprites/spr_christmas_tree/spr_christmas_tree.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -81,7 +81,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b3c5e48e-c0a7-4f14-92e5-100b06d33a73","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"26e1c617-9e18-4fc4-959f-08a44e9ff5f2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

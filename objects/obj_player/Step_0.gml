@@ -24,7 +24,9 @@ function movement(dt) {
 	// max speed
 	var slow_factor = has_present ? present_slow : 1;
 	speed = clamp(speed, -slow_factor * max_speed * dt, slow_factor * max_speed * dt);
-	
+	if(!has_present && instance_exists(obj_gun_candycane)) {
+		speed =3*  max_speed * dt;
+	}
 	// area bounds
     x = clamp(x, 0, room_width);
     y = clamp(y, 0, room_height);

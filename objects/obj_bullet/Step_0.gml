@@ -49,3 +49,4 @@ if (life_ticks >= init_ticks && init == false) {
 if (life_ticks >= 3) {
 	instance_destroy();
 }
+speed=bullet_speed * dt;

@@ -22,7 +22,7 @@ function initialize() {
 	// muzzle
 	muzzle_length = 0;
 	muzzle_offset_x = 0;
-	muzzle_offset_y = 0;
+	muzzle_offset_y = -8;
 	
 	// ammo
 	max_ammo = infinity;

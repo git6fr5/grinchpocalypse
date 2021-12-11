@@ -35,8 +35,9 @@ function check_for_presents() {
 
 function pick_loot() {
 	
-	var loot_list = [obj_loot, obj_loot_popper];
-	return obj_loot_popper;
+	var loot_list = [obj_loot, obj_loot_popper, obj_loot_candycane];
+	var loot_index = floor(random_range(0, 2.99));
+	return loot_list[loot_index];
 	
 }
 	
